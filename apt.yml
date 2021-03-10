@@ -1,0 +1,13 @@
+
+- name: TESTANDO PLAYBOOK
+  hosts: all
+ 
+  tasks:
+      - name: EXECUTANDO UPDATE DO SO 
+        package:
+          update_cache: yes
+
+      - name: EXECUTANDO UPGRADE DO SO
+        package:
+          name: "*"
+          state: latest
